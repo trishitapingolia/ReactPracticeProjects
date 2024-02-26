@@ -13,7 +13,9 @@ function RollDice({CurrentDice,roll,resetScore}) {
 
     return (
         <Container>
-            <img src={`/images/dice_${CurrentDice}.png`} alt="dice1" onClick={roll}/>
+            <div>
+                <img src={`/images/dice_${CurrentDice}.png`} alt="dice1" onClick={roll}/>
+            </div>
             <h4>Click on Dice to Roll</h4>  
             <div className="buttons">
                 <button onClick={resetScore}>Reset Score</button>

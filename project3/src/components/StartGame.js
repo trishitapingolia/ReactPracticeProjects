@@ -17,15 +17,16 @@ function StartGame() {
     const roll = () => {
         if(!SelectedNumber){
             setError("You must select a number");
+            setCurrentDice(7);
             return
         };
         const randomNumber = generateRandomNumber(1,6);
-        setCurrentDice((prev)=>randomNumber);
+        setCurrentDice((_prev)=>randomNumber);
 
         if (randomNumber === SelectedNumber){
-            setCount(Count+SelectedNumber);
+            setCount(Count=>Count+SelectedNumber);
         }else{
-            setCount(Count-2);  
+            setCount(Count=>Count-2);  
         }
 
 
